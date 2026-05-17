@@ -22,7 +22,7 @@ const button = document.getElementById('fetchButton');
             resultDiv.innerHTML = '';
             
             try {
-                const resp = await fetch('https://api.nekosapi.com/v4');
+                const resp = await fetch('https://nekos.best/api/v2/neko');
                 
                 
                 if (!resp.ok) {
