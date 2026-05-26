@@ -1,5 +1,3 @@
-// ================= BUTTONS =================
-
 const buttons = document.querySelectorAll(".menu-btn");
 const pages = document.querySelectorAll(".content-block");
 
@@ -7,24 +5,19 @@ buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        // убираем active у кнопок
         buttons.forEach(btn => {
             btn.classList.remove("active");
         });
 
-        // скрываем страницы
         pages.forEach(page => {
             page.classList.remove("active");
         });
 
-        // активная кнопка
         button.classList.add("active");
 
-        // target страницы
         const target =
             button.getAttribute("data-target");
 
-        // показываем страницу
         document
             .getElementById(target)
             .classList.add("active");
@@ -32,9 +25,6 @@ buttons.forEach(button => {
     });
 
 });
-
-
-// ================= API BUTTON =================
 
 const fetchButton =
     document.getElementById("fetchButton");
